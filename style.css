@@ -1,0 +1,121 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f9;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-row {
+  display: flex;
+  gap: 30px;
+}
+
+.btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+/* Invoice Preview */
+.invoice-preview {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #f9f9f9;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Header */
+  .invoice-preview h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a4a4a;
+  }
+  
+  /* Invoice Details */
+  .invoice-preview p {
+    margin: 8px 0;
+  }
+  
+  /* Highlight Important Text */
+  .invoice-preview p strong {
+    color: #333;
+  }
+  
+  /* Footer Message */
+  .invoice-preview p:last-child {
+    margin-top: 15px;
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Print Styles */
+  @media print {
+    body * {
+      visibility: hidden; /* Hide everything */
+    }
+    #invoice-preview, #invoice-preview * {
+      visibility: visible; /* Show only invoice preview */
+    }
+    #invoice-preview {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 30px;
+      border: none; /* Remove border for print */
+      box-shadow: none; /* Remove shadow for print */
+      background: white; /* Ensure white background */
+    }
+  }

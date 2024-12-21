@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style.css"> 
+   <link rel="icon" href="billing.jpeg" type="image/jpeg">
+
+  <title>Billing System - Automobile Shop</title>
+ 
+</head>
+<body>
+  <div class="container">
+    <h1>Automobile Shop Billing System</h1>
+    <form id="billing-form">
+      <!-- Customer Details -->
+      <label>Customer Name:</label>
+      <input type="text" id="customer-name" placeholder="Enter customer name" required />
+
+      <label>Item Name:</label>
+      <input type="text" id="vehicle-number" placeholder="Enter vehicle name" required />
+      
+      <label>Quantity:</label>
+      <input type="text" id="quantity" placeholder="Enter Quantity of the item" required />
+      
+      <div class="form-row">
+        <div>
+          <label>Total Amount:</label>
+          <input type="number" id="total-amount" placeholder="Enter total amount" required />
+        </div>
+        <div>
+          <label>GST Tax (%):</label>
+          <input type="number" id="tax" value="0" placeholder="Enter tax percentage" />
+        </div>
+      </div>
+
+      <label>Payment Method:</label>
+      <select id="payment-method">
+        <option value="Cash">Cash</option>
+        <option value="UPI">UPI</option>
+        <option value="Card">Card</option>
+      </select>
+
+      <!-- Buttons -->
+      <div class="btn-container">
+        <button type="button" onclick="generateInvoice()">Preview</button>
+        <button type="button" onclick="printInvoice()">Print</button>
+      </div>
+    </form>
+
+    <!-- Invoice Preview -->
+    <div id="invoice-preview" class="invoice-preview"></div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src='index.js'>
+   
+  </script>
+</body>
+</html>
